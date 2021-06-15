@@ -1,0 +1,19 @@
+
+<div class="text-center p-2" style="margin-left:520px; margin-top:10px;">
+
+    <ul class="list-group col-5">
+    <li class="list-group-item list-group-item-warning">
+    {{user.name}}
+    </li>
+    <li class="list-group-item list-group-item-warning">
+    {{user.city}}
+    </li>
+    <li class="list-group-item list-group-item-warning">
+    {{user.email}}
+    </li>
+    <li class="list-group-item list-group-item-warning">
+       <a [routerLink]="user.id?.toString()" class="btn btn-info">Details</a>
+        </li>
+    </ul>
+    </div>
+    

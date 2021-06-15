@@ -1,0 +1,22 @@
+
+<div *ngIf="user.name != null;else noData"  class="text-center p-2" style="margin-left:520px; margin-top:10px;">
+    <h2 class="text-center" style="margin-right:570px;"> Details for :<span style="background:rgb(63, 204, 181); color:white;">{{user.name}} </span> </h2>
+    <ul class="list-group col-5">
+    <li class="list-group-item list-group-item-success"> Address :
+    {{user.city}}
+    </li>
+    <li class="list-group-item list-group-item-success"> E-Mail :
+    {{user.email}}
+    </li>
+
+    <li class="list-group-item list-group-item-light">
+        <a (click)="delete()" class="btn btn-danger m-auto" >delete</a> 
+        <a (click)="edit()" class="btn btn-dark">Edit</a>
+         </li>     
+    </ul>
+    </div>
+    <ng-template #noData>
+    <h2>No details</h2>
+    <a (click)="delete()" class="btn btn-danger m-auto" >delete</a> 
+    </ng-template>
+    
